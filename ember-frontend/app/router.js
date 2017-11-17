@@ -16,6 +16,7 @@ Router.map(function() {
 
 
   this.route('route');
+  this.route('addroute')
   
 });
 
