@@ -14,9 +14,11 @@ module.exports = function(app){
     }
 
     app.get('/api/test', function(req, res){
-        var connection = database_connect();
-        res.send(connection.threadId);
-        connection.end();
+        var connect = database_connect();
+        connect.query('SELECT * FROM `items`',function (error, results, fields){
+            res.send(results);
+        });        
+        connect.end();
     });
 
     app.get('*', function(req, res) {
