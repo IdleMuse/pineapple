@@ -1,10 +1,10 @@
 module.exports = function(app){
 
-    // app.get('/api/posts', function(req, res){
-    //     return {"test":true};
-    // });
+    app.get('/api/posts', function(req, res){
+        res.send('hi');
+    });
 
     app.get('*', function(req, res) {
-        res.sendfile('./public/index.html'); // load our public/index.html file
+        res.sendFile('./public/index.html');
     });
 };
