@@ -13,11 +13,27 @@ module.exports = function(app){
         connection.connect()
     }
 
-    app.get('/api/test', function(req, res){
+    app.get('/api/items', function(req, res){
         var connect = database_connect();
         connect.query('SELECT * FROM `items`',function (error, results, fields){
             res.send(results);
-        });        
+        });
+        connect.end();
+    });
+
+    app.get('/api/destinations', function(req, res){
+        var connect = database_connect();
+        connect.query('SELECT * FROM `destinations`',function (error, results, fields){
+            res.send(results);
+        });
+        connect.end();
+    });
+
+    app.get('/api/routes', function(req, res){
+        var connect = database_connect();
+        connect.query('SELECT * FROM `routes`',function (error, results, fields){
+            res.send(results);
+        });
         connect.end();
     });
 
