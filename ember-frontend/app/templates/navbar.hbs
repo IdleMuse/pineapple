@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default navbar-top">
+    <div class="nav-wrapper teal lighten-2">
+      {{#link-to 'index' }}<a href="" class="brand-logo">Problem 2</a>{{/link-to}}
+      <ul id="nav-mobile" class="right hide-on-med-and-down ">
+        
+
+         <!-- Dropdown Trigger -->
+  <a class='dropdown-button btn' href='#' data-activates='itemsDropdown'>Items</a>
+  <a class='dropdown-button btn' href='#' data-activates='destinationsDropdown'>Destinations</a>
+  <a class='dropdown-button btn' href='#' data-activates='routesDropdown'>Routes</a>
+
+    <!-- Dropdown Structure -->
+        <ul id='itemsDropdown' class='dropdown-content'>
+          {{#link-to 'additem' tagName="li"}}<a href="">Add</a>{{/link-to}}
+          <li><a href="#!">Edit</a></li>
+          <li><a href="#!">Delete</a></li>
+          {{#link-to 'viewitems' tagName="li"}}<a href="">View</a>{{/link-to}}
+        </ul>
+
+        <ul id='destinationsDropdown' class='dropdown-content'>
+          {{#link-to 'adddestination' tagName="li"}}<a href="">Add</a>{{/link-to}}
+          <li><a href="#!">Edit</a></li>
+          <li><a href="#!">Delete</a></li>
+          {{#link-to 'viewdestinations' tagName="li"}}<a href="">View</a>{{/link-to}}
+        </ul>
+
+        <ul id='routesDropdown' class='dropdown-content'>
+          <li><a href="#!">Add</a></li>
+          <li><a href="#!">Edit</a></li>
+          <li><a href="#!">Delete</a></li>
+          {{#link-to 'viewroutes' tagName="li"}}<a href="">View</a>{{/link-to}}
+        </ul>
+
+        </ul>
+
+
+
+
+
+    </div>
+  </nav>
+
