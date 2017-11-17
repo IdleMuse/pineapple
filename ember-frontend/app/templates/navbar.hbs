@@ -6,19 +6,19 @@
 
          <!-- Dropdown Trigger -->
   <a class='dropdown-button btn' href='#' data-activates='itemsDropdown'>Items</a>
-  <a class='dropdown-button btn' href='#' data-activates='deliveryDropdown'>Delivery</a>
+  <a class='dropdown-button btn' href='#' data-activates='destinationsDropdown'>Destinations</a>
   <a class='dropdown-button btn' href='#' data-activates='routesDropdown'>Routes</a>
 
     <!-- Dropdown Structure -->
         <ul id='itemsDropdown' class='dropdown-content'>
-          {{#link-to 'items' tagName="li"}}<a href="">Add</a>{{/link-to}}
+          {{#link-to 'additem' tagName="li"}}<a href="">Add</a>{{/link-to}}
           <li><a href="#!">Edit</a></li>
           <li><a href="#!">Delete</a></li>
           <li><a href="">View</a></li>
         </ul>
 
-        <ul id='deliveryDropdown' class='dropdown-content'>
-          <li><a href="#!">Add</a></li>
+        <ul id='destinationsDropdown' class='dropdown-content'>
+          {{#link-to 'adddestination' tagName="li"}}<a href="">Add</a>{{/link-to}}
           <li><a href="#!">Edit</a></li>
           <li><a href="#!">Delete</a></li>
           <li><a href="#!">View</a></li>
