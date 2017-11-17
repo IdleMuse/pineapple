@@ -1,23 +1,24 @@
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Problem 2</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+<nav class="navbar navbar-default navbar-top">
+    <div class="nav-wrapper teal lighten-2">
+      {{#link-to 'index' }}<a href="" class="brand-logo">Problem 2</a>{{/link-to}}
+      <ul id="nav-mobile" class="right hide-on-med-and-down ">
         
 
          <!-- Dropdown Trigger -->
   <a class='dropdown-button btn' href='#' data-activates='itemsDropdown'>Items</a>
-  <a class='dropdown-button btn' href='#' data-activates='deliveryDropdown'>Delivery</a>
+  <a class='dropdown-button btn' href='#' data-activates='destinationsDropdown'>Destinations</a>
   <a class='dropdown-button btn' href='#' data-activates='routesDropdown'>Routes</a>
 
     <!-- Dropdown Structure -->
         <ul id='itemsDropdown' class='dropdown-content'>
-          {{#link-to 'items' tagName="li"}}<a href="">Add</a>{{/link-to}}
+          {{#link-to 'additem' tagName="li"}}<a href="">Add</a>{{/link-to}}
           <li><a href="#!">Edit</a></li>
           <li><a href="#!">Delete</a></li>
+          <li><a href="">View</a></li>
         </ul>
 
-        <ul id='deliveryDropdown' class='dropdown-content'>
-          <li><a href="#!">Add</a></li>
+        <ul id='destinationsDropdown' class='dropdown-content'>
+          {{#link-to 'adddestination' tagName="li"}}<a href="">Add</a>{{/link-to}}
           <li><a href="#!">Edit</a></li>
           <li><a href="#!">Delete</a></li>
           <li><a href="#!">View</a></li>
