@@ -14,8 +14,9 @@ actions: {
 
       		$.getJSON('/api/items',  function(result){
         		$.each(result, function(i, field){
-        	
-      			console.log(result);
+
+        		$( ".inner" ).append( "<p><strong> Name:</strong> " + result[i]['item_name'] + "</p><p> <strong>Description: </strong>" + result[i]['item_description'] + "</p><br>" );
+      			
         	});
 
 
