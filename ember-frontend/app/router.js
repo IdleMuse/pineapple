@@ -14,11 +14,13 @@ Router.map(function() {
 
   this.route('destination');
   this.route('adddestination');
+  this.route('viewdestinations')
 
 
   this.route('route');
   this.route('addroute')
-  
+  this.route('viewroutes');
+
 });
 
 export default Router;
