@@ -1,0 +1,42 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Problem 2</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+
+         <!-- Dropdown Trigger -->
+  <a class='dropdown-button btn' href='#' data-activates='itemsDropdown'>Items</a>
+  <a class='dropdown-button btn' href='#' data-activates='deliveryDropdown'>Delivery</a>
+  <a class='dropdown-button btn' href='#' data-activates='routesDropdown'>Routes</a>
+        </ul>
+
+
+
+    <!-- Dropdown Structure -->
+        <ul id='itemsDropdown' class='dropdown-content'>
+          {{#link-to 'items' tagName="li"}}<a href="#!">Add</a>{{/link-to}}
+          <li><a href="#!">Edit</a></li>
+          <li><a href="#!">Delete</a></li>
+          {{#link-to 'itemsList' tagName="li"}}<a href="">View</a>{{/link-to}}
+        </ul>
+
+        <ul id='deliveryDropdown' class='dropdown-content'>
+          <li><a href="#!">Add</a></li>
+          <li><a href="#!">Edit</a></li>
+          <li><a href="#!">Delete</a></li>
+          <li><a href="#!">View</a></li>
+        </ul>
+
+        <ul id='routesDropdown' class='dropdown-content'>
+          <li><a href="#!">Add</a></li>
+          <li><a href="#!">Edit</a></li>
+          <li><a href="#!">Delete</a></li>
+          <li><a href="#!">View</a></li>
+        </ul>
+
+
+
+
+    </div>
+  </nav>
+
