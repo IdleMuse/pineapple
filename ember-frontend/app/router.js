@@ -8,7 +8,8 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('items');
-  this.route('additem')
+  this.route('additem');
+  this.route('viewitems');
 
 
   this.route('destination');
