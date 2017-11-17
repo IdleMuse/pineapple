@@ -1,5 +1,8 @@
 module.exports = function(app){
 
+    var bodyParser = require('body-parser');
+    app.use(bodyParser.json());
+
     function database_connect(){
         var mysql = require('mysql')
         var connection = mysql.createConnection({
@@ -32,6 +35,33 @@ module.exports = function(app){
     app.get('/api/routes', function(req, res){
         var connect = database_connect();
         connect.query('SELECT * FROM `routes`',function (error, results, fields){
+            res.send(results);
+        });
+        connect.end();
+    });
+
+    app.post('/api/items', function(req, res){
+        var connect = database_connect();
+        var item = req.body;
+        connect.query('INSERT INTO `items` SET ?',item,function (error, results, fields){
+            res.send(results);
+        });
+        connect.end();
+    });
+
+    app.post('/api/destinations', function(req, res){
+        var connect = database_connect();
+        var item = req.body;
+        connect.query('INSERT INTO `destinations` SET ?',item,function (error, results, fields){
+            res.send(results);
+        });
+        connect.end();
+    });
+
+    app.post('/api/routes', function(req, res){
+        var connect = database_connect();
+        var item = req.body;
+        connect.query('INSERT INTO `routes` SET ?',item,function (error, results, fields){
             res.send(results);
         });
         connect.end();
